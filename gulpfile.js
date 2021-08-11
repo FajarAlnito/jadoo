@@ -50,10 +50,14 @@ function browsersyncReload (cb) {
 function watchTask () {
   watch("./src/*.html", series(htmlminTask, browsersyncReload));
   watch("./src/css/*.css", series(cssTask, browsersyncReload));
+  watch("./src/images", series(imageminTask));
 }
 
 // Default Gulp Task
-exports.default = series(htmlminTask, cssTask, browsersyncServe, watchTask);
-exports.html = htmlminTask;
-exports.css = cssTask;
-exports.images = imageminTask;
+exports.default = series(
+  htmlminTask,
+  cssTask,
+  imageminTask,
+  browsersyncServe,
+  watchTask
+);

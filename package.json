@@ -2,12 +2,11 @@
   "name": "jadoo",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
   "scripts": {
     "dev": "gulp"
   },
   "keywords": [],
-  "author": "",
+  "author": "Yudi",
   "license": "ISC",
   "devDependencies": {
     "autoprefixer": "^10.3.1",
